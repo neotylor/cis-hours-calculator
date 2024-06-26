@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/cis-hours-calculator/static/css/main.f855e6bc.css",
-    "main.js": "/cis-hours-calculator/static/js/main.19cb2ed4.js",
+    "main.js": "/cis-hours-calculator/static/js/main.480f80ca.js",
     "static/js/453.d365480f.chunk.js": "/cis-hours-calculator/static/js/453.d365480f.chunk.js",
     "index.html": "/cis-hours-calculator/index.html",
     "main.f855e6bc.css.map": "/cis-hours-calculator/static/css/main.f855e6bc.css.map",
-    "main.19cb2ed4.js.map": "/cis-hours-calculator/static/js/main.19cb2ed4.js.map",
+    "main.480f80ca.js.map": "/cis-hours-calculator/static/js/main.480f80ca.js.map",
     "453.d365480f.chunk.js.map": "/cis-hours-calculator/static/js/453.d365480f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.19cb2ed4.js"
+    "static/js/main.480f80ca.js"
   ]
 }
