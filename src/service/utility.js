@@ -1,7 +1,7 @@
 Number.prototype.getWorkingHours = function () {
   const int = parseInt(this)
-  const hours = Math.floor(int / 60);
-  const minutes = Math.floor(hours % 60);
+  const hours = Math.floor(Math.abs(int) / 60);
+  const minutes = Math.floor(Math.abs(int) % 60);
   return { hours, minutes }
 }
 Number.prototype.calculateHours = function (totalDays) {
