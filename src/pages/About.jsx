@@ -1,8 +1,8 @@
 import React from 'react';
 
-const About = () => {
+const About = ({ mode }) => {
   return (
-    <div className='about-page'>
+    <div className={`about-page bg-${mode} text-${mode === 'light'?'dark':'light'}`}>
       <h1>About Working Hours Calculator</h1>
       <p>
         Welcome to the Working Hours Calculator web application! This tool is designed to help you keep track of your working hours efficiently and accurately.

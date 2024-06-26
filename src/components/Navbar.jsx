@@ -5,7 +5,6 @@ import {
 } from "react-router-dom";
 export default function Navbar(props) {
   return (
-    // <BrowserRouter>
     <nav className={`navbar navbar-expand-lg rounded-bottom bg-${props.mode}`}>
       <div className="container-fluid">
         <Link className={`navbar-brand text-${props.mode === 'light'?'dark':'light'}`} to="/">{props.title}</Link>
@@ -25,14 +24,9 @@ export default function Navbar(props) {
             <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
             <label className={`form-check-label text-${props.mode === 'light'?'dark':'light'}`} htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
           </div>
-          {/* <form className="d-flex" role="search">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-primary" type="submit">Search</button>
-          </form> */}
         </div>
       </div>
     </nav>
-    // </BrowserRouter>
   )
 }
 

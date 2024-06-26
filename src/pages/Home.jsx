@@ -1,6 +1,7 @@
 import TestForm from "../components/TestForm";
 
 function Home({ showAlert, mode }) {
+  
   return (
     <TestForm 
       showAlert={showAlert} 
