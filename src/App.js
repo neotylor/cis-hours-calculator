@@ -1,14 +1,10 @@
 import Navbar from './components/Navbar';
-import TestForm from './components/TestForm';
-// import About from './components/About';
 import { useState } from 'react';
 import Alert from './components/Alert';
-// import {
-//   BrowserRouter,
-//   Routes,
-//   Route,
-// } from "react-router-dom";
-import './service/utility'; 
+import './service/utility';
+import { Route, Routes } from 'react-router-dom';
+import About from './pages/About';
+import Home from './pages/Home';
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -38,7 +34,10 @@ function App() {
     <div className='container'>
       <Navbar title="Hours Calculator" mode={mode} toggleMode={toggleMode} />
       <Alert alertMsg={alert} />
-      <TestForm showAlert={showAlert} paddingVal="my-3" mode={mode} title="Enter The text to Analyze below" title2="Calculate Hours" />
+      <Routes>
+        <Route exact path="/" element={<Home mode={mode} showAlert={showAlert}/>} />
+        <Route path='/about' element={<About />} />
+      </Routes>
     </div>
   );
 }
