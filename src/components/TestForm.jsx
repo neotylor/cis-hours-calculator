@@ -31,7 +31,6 @@ export default function TestForm(props) {
       <div className="mb-3">
         <textarea className="form-control" style={{ backgroundColor: props.mode === 'light' ? 'white' : '#212529', color: props.mode === 'light' ? 'black' : 'white' }} onChange={e => setText(e.target.value)} value={text} id="mybox1" rows="8"></textarea>
       </div>
-      { console.log(result?.calculateHours, "asdasdasd") }
       { result?.calculateHours !== 0 && <>
         <img src={ result?.calculateHours < 0 ? './fail.gif': './pass.gif'} alt='Result'/>
         <h2 style={{ color: props.mode === 'light' ? '#777777' : '#ffcd39' }}>Hours Summary</h2>
