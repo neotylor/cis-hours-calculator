@@ -1,4 +1,3 @@
-import './App.css';
 import Navbar from './components/Navbar';
 import TestForm from './components/TestForm';
 // import About from './components/About';
@@ -9,38 +8,38 @@ import Alert from './components/Alert';
 //   Routes,
 //   Route,
 // } from "react-router-dom";
+import './service/utility'; 
+
 function App() {
-  const [mode,setMode] = useState('light');
-  const [alert,setAlert] = useState(null);
-  const showAlert=(message,type,color)=>{
+  const [mode, setMode] = useState('light');
+  const [alert, setAlert] = useState(null);
+  const showAlert = (message, type, color) => {
     setAlert({
       msg: message,
       type: type,
       color: color
     })
-    setTimeout(()=>{
+    setTimeout(() => {
       setAlert(null)
-    },3000)
+    }, 3000)
   }
-  const toggleMode = ()=>{
-    if(mode === 'light'){
+  const toggleMode = () => {
+    if (mode === 'light') {
       setMode('dark');
       document.body.style.backgroundColor = 'black';
-      showAlert("Dark Mode is Enabled","success","warning");
-    }else{
+      showAlert("Dark Mode is Enabled", "success", "warning");
+    } else {
       setMode('light');
       document.body.style.backgroundColor = 'white';
-      showAlert("Dark Mode is Disabled","success","success");
+      showAlert("Dark Mode is Disabled", "success", "success");
     }
   }
   return (
-    <>
-      <div className='container'>
-        <Navbar title="React New App" mode={mode} toggleMode={toggleMode} />
-        <Alert alertMsg={alert} />
-        <TestForm showAlert={showAlert} paddingVal="my-3" mode={mode} title="Enter The text to Analyze below" title2="Calculate Hours" />
-      </div>
-    </>
+    <div className='container'>
+      <Navbar title="Hours Calculator" mode={mode} toggleMode={toggleMode} />
+      <Alert alertMsg={alert} />
+      <TestForm showAlert={showAlert} paddingVal="my-3" mode={mode} title="Enter The text to Analyze below" title2="Calculate Hours" />
+    </div>
   );
 }
 
