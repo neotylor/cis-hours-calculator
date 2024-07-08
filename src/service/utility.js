@@ -27,11 +27,11 @@ String.prototype.compareTimes = function () {
   const givenMinutes = parseTimeString(this);
 
   if (givenMinutes > referenceMinutes) {
-    return { msg: `Ahead by ${(givenMinutes - referenceMinutes).getWorkingHours(true)}.`, status: 'ahead' };
+    return { msg: `Ahead by ${(givenMinutes - referenceMinutes).getWorkingHours(true)}.`, status: 'table-success' };
   } else if (givenMinutes < referenceMinutes) {
-    return { msg: `Behind by ${(referenceMinutes - givenMinutes).getWorkingHours(true)}.`, status: 'behind' };
+    return { msg: `Behind by ${(referenceMinutes - givenMinutes).getWorkingHours(true)}.`, status: 'table-danger' };
   } else {
-    return 'No Ahead/Behind';
+    return { msg: 'No Ahead/Behind', status: '' } ;
   }
 }
 
