@@ -35,4 +35,13 @@ String.prototype.compareTimes = function () {
   }
 }
 
+export function getTime(str) {
+  const split = str.replace('hrs', '').replace('min', '').split(',');
+  return split.length === 2 ?
+    (parseInt(split?.[0]?.trim()) * 60) + parseInt(split[1]?.trim()) :
+    split.length === 1 ?
+      parseInt(split?.[0]?.trim()) :
+      0
+}
+
 export default {}
