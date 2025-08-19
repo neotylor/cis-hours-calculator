@@ -30,7 +30,10 @@ export default function TestForm(props) {
 
   return (
     <div className='secondBox'>
-      <h2 style={{ color: props.mode === 'light' ? '#777777' : '#ffcd39' }}>{props.title2}</h2>
+      <div className='d-flex justify-content-between align-items-center'>
+        <h2 style={{ color: props.mode === 'light' ? '#777777' : '#ffcd39' }}>{props.title2}</h2>
+        { props?.link && props?.link?.url && props?.link?.text && <p><a href={props?.link?.url} class="link-info">{props?.link?.text}</a></p> }
+      </div>
       <div className="mb-3">
         <textarea className="form-control" style={{ backgroundColor: props.mode === 'light' ? 'white' : '#212529', color: props.mode === 'light' ? 'black' : 'white' }} onChange={e => setText(e.target.value)} value={text} id="mybox1" rows="8"></textarea>
       </div>
